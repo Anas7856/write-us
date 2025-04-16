@@ -57,11 +57,11 @@ function updateClock() {
   const icon = document.getElementById("darkModeToggle");
 
   // Morning: 6 AM to 6 PM UTC
-  //   if (hours >= 6 && hours < 18) {
-  //     icon.className = "bi bi-sun-fill"; // Bright sun icon
-  //   } else {
-  //     icon.className = "bi bi-moon-stars-fill"; // Moon icon
-  //   }
+  if (hours >= 6 && hours < 18) {
+    icon.className = "bi bi-sun-fill light-mode-icon"; // Bright sun icon
+  } else {
+    icon.className = "bi bi-moon-stars-fill dark-mode-icon"; // Moon icon
+  }
 }
 
 // Update every second
