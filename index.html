@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bark</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="imgs/logo.png" alt="" id="nav-logo" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="bi bi-list"></i>
+          <i class="bi bi-x"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto ms-auto mb-2 mb-lg-0 gap-2 gap-lg-4">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Our services </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"> How to order </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact us </a>
+            </li>
+          </ul>
+          <div class="d-flex align-items-center">
+            <div class="ldn-box me-3">
+              <!-- <i
+                id="darkModeToggle"
+                class="bi bi-sun-fill"
+                onclick="toggleDarkMode()"
+                style="cursor: pointer"
+              ></i> -->
+              <button id="darkModeToggle" onclick="toggleDarkMode()"></button>
+              <h4>
+                LDN
+                <span id="timeDisplay">--:-- GMT</span>
+              </h4>
+            </div>
+
+            <button class="btn">Login</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- hero -->
+    <div class="hero">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="hero-content">
+              <p class="rotatingText-description">We Do</p>
+              <h1 class="rotatingText-adjective">
+                Writing CVs <span class="green-dot"></span>
+              </h1>
+              <h1 class="rotatingText-adjective">
+                Statements <span class="green-dot"></span>
+              </h1>
+              <h1 class="rotatingText-adjective">
+                Reports <span class="hero-gray-dot"></span>
+              </h1>
+              <h1 class="rotatingText-adjective">
+                Presentations <span class="hero-black-dot"></span>
+              </h1>
+              <h1 class="rotatingText-adjective">
+                Interview Prep <span class="green-dot"></span>
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- hero-bottom -->
+    <div class="hero-bottom">
+      <div class="container">
+        <div class="row gy-5">
+          <div class="col-2 col-md-4 col-lg-4">
+            <button
+              class="hero-bottom-circle"
+              onclick="document.querySelector('.who-are').scrollIntoView({ behavior: 'smooth' })"
+            >
+              <i class="fa-solid fa-arrow-down down-arrow"></i>
+            </button>
+          </div>
+          <div class="col-10 col-md-8 col-lg-8">
+            <div class="hero-bottom-content">
+              <p>
+                Take your writing to the next level with expert strategies,
+                captivating creativity, and polished execution.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- video section -->
+    <div class="video-section">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="video-box">
+              <video
+                src="imgs/mountain.mp4"
+                autoplay
+                muted
+                loop
+                playsinline
+              ></video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Who we are -->
+    <div class="Who-we-are-section who-are">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 col-md-12 col-lg-4">
+            <div class="Who-we-are-content-first">
+              <div class="Who-we-are-circle"></div>
+              <h4>Who we are</h4>
+            </div>
+          </div>
+          <div class="col-12 col-md-12 col-lg-8">
+            <div class="Who-we-are-content-second">
+              <p>
+                We're a dedicated writing service, empowering individuals to
+                create impactful work, express their ideas effectively, and stay
+                ahead of the game – after working with us, you'll lead the way.
+              </p>
+              <button>
+                <span class="button-dot"></span>
+                Get in touch
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- partnerships -->
+    <div class="partnerships">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 col-md-12 col-lg-4">
+            <div class="partnerships-content">
+              <div class="partnerships-header">
+                <div class="partnerships-circle"></div>
+                <h4>Our partnerships</h4>
+              </div>
+              <p>
+                We’re one of just a handful of global <br />
+                agencies to be certified by Meta for <br />
+                both strategy and data.
+              </p>
+              <button>
+                <span class="button-dot"></span>
+                Get in touch
+              </button>
+            </div>
+          </div>
+          <div class="col-12 col-md-12 col-lg-8">
+            <div class="partnership-pictures">
+              <div class="partnership-logos">
+                <img src="imgs/google.svg" alt="" />
+                <img src="imgs/meta.svg" alt="" />
+                <img src="imgs/tiktok.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- What we do -->
+    <div class="Who-we-are-section">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 col-md-12 col-lg-4">
+            <div class="Who-we-are-content-first">
+              <div class="Who-we-are-circle"></div>
+              <h4>What we do</h4>
+            </div>
+          </div>
+          <div class="col-12 col-md-12 col-lg-8">
+            <div class="Who-we-are-content-second">
+              <p>
+                Your ultimate writing partner—empowering you to excel in
+                academics, thrive in your career, and navigate beyond
+                boundaries!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Creative Writing -->
+    <div class="paid-media">
+      <div class="container-fluid border-top border-1 paid-media-container">
+        <div class="row">
+          <div class="col-12 col-md-12 col-lg-4">
+            <div class="paid-media-title">
+              <h1>
+                Creative Writing
+                <span class="paid-media-green-dot"></span>
+              </h1>
+            </div>
+          </div>
+          <div class="col-12 col-md-12 col-lg-8">
+            <div class="paid-media-content">
+              <p>
+                Our
+                <span class="green-text">creative writing services</span> are
+                designed to enhance your communication, improve your
+                professional presence, and support career advancement, all
+                tailored to meet your specific needs with precision and
+                expertise.
+              </p>
+              <ul>
+                <li>
+                  <span><i class="fa-solid fa-caret-right arrow"></i></span>
+                  Brand & Marketing
+                </li>
+                <li>
+                  <span><i class="fa-solid fa-caret-right arrow"></i></span>
+                  Speech Writing
+                </li>
+                <li>
+                  <span><i class="fa-solid fa-caret-right arrow"></i></span>
+                  Presentation
+                </li>
+                <li>
+                  <span><i class="fa-solid fa-caret-right arrow"></i></span>
+                  Content Writing
+                </li>
+                <li>
+                  <span><i class="fa-solid fa-caret-right arrow"></i></span>
+                  Editorial Content
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- creative -->
+    <div class="paid-media">
+      <div class="container-fluid border-top border-1 paid-media-container">
+        <div class="row">
+          <div class="col-12 col-md-12 col-lg-4">
+            <div class="paid-media-title">
+              <h1>
+                Legal Writing
+                <span class="paid-media-green-dot yellow-dot"></span>
+              </h1>
+            </div>
+          </div>
+          <div class="col-12 col-md-12 col-lg-8">
+            <div class="paid-media-content">
+              <p>
+                Our
+                <span class="yellow-text">legal writing services</span> deliver
+                expertly customised, precise documents that guarantee clarity,
+                accuracy, and reliability for all your legal needs.
+              </p>
+              <ul>
+                <li>
+                  <span
+                    ><i class="fa-solid fa-caret-right arrow pink-arrow"></i
+                  ></span>
+                  Tenancy Agreements
+                </li>
+                <li>
+                  <span
+                    ><i class="fa-solid fa-caret-right arrow pink-arrow"></i
+                  ></span>
+                  Skeleton Arguments
+                </li>
+                <li>
+                  <span
+                    ><i class="fa-solid fa-caret-right arrow pink-arrow"></i
+                  ></span>
+                  Witness Statements
+                </li>
+                <li>
+                  <span
+                    ><i class="fa-solid fa-caret-right arrow pink-arrow"></i
+                  ></span>
+                  Contracts
+                </li>
+                <li>
+                  <span
+                    ><i class="fa-solid fa-caret-right arrow pink-arrow"></i
+                  ></span>
+                  Other Legal Documents
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- professional-writing -->
+    <div class="paid-media">
+      <div class="container-fluid border-top border-1 paid-media-container">
+        <div class="row">
+          <div class="col-12 col-md-12 col-lg-4">
+            <div class="paid-media-title">
+              <h1>
+                Professional Writing
+                <span class="paid-media-green-dot gray-dot"></span>
+              </h1>
+            </div>
+          </div>
+          <div class="col-12 col-md-12 col-lg-8">
+            <div class="paid-media-content">
+              <p>
+                Our
+                <span class="gray-text">professional writing services</span> are
+                designed to enhance your communication, improve your
+                professional presence, and support career advancement, all
+                tailored to meet your specific needs with precision and
+                expertise.
+              </p>
+              <ul>
+                <li>
+                  <span
+                    ><i class="fa-solid fa-caret-right arrow gray-arrow"></i
+                  ></span>
+                  Presentations
+                </li>
+                <li>
+                  <span
+                    ><i class="fa-solid fa-caret-right arrow gray-arrow"></i
+                  ></span>
+                  Business Reports
+                </li>
+                <li>
+                  <span
+                    ><i class="fa-solid fa-caret-right arrow gray-arrow"></i
+                  ></span>
+                  Statements & Cover Letters
+                </li>
+                <li>
+                  <span
+                    ><i class="fa-solid fa-caret-right arrow gray-arrow"></i
+                  ></span>
+                  Interview Preparation
+                </li>
+                <li>
+                  <span
+                    ><i class="fa-solid fa-caret-right arrow gray-arrow"></i
+                  ></span>
+                  CVS
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- data science -->
+    <div class="paid-media">
+      <div class="container-fluid border-top border-1 paid-media-container">
+        <div class="row">
+          <div class="col-12 col-md-12 col-lg-4">
+            <div class="paid-media-title">
+              <h1>
+                Academic writing<span
+                  class="paid-media-green-dot blue-dot"
+                ></span>
+              </h1>
+            </div>
+          </div>
+          <div class="col-12 col-md-12 col-lg-8">
+            <div class="paid-media-content">
+              <p>
+                Our
+                <span class="blue-text">academic writing services</span> provide
+                expertly crafted, research-based content, tailored to meet your
+                academic needs with precision and originality.
+              </p>
+              <ul>
+                <li>
+                  <span
+                    ><i class="fa-solid fa-caret-right arrow blue-arrow"></i
+                  ></span>
+                  Modal Eassay
+                </li>
+                <li>
+                  <span
+                    ><i class="fa-solid fa-caret-right arrow blue-arrow"></i
+                  ></span>
+                  Thesis & Dissertation
+                </li>
+                <li>
+                  <span
+                    ><i class="fa-solid fa-caret-right arrow blue-arrow"></i
+                  ></span>
+                  Case Studies & Reports
+                </li>
+                <li>
+                  <span
+                    ><i class="fa-solid fa-caret-right arrow blue-arrow"></i
+                  ></span>
+                  Articles
+                </li>
+                <li>
+                  <span
+                    ><i class="fa-solid fa-caret-right arrow blue-arrow"></i
+                  ></span>
+                  Literature Reviews
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- academic writing-->
+    <div class="partnerships">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 col-md-12 col-lg-4">
+            <div class="partnerships-content">
+              <div class="partnerships-header">
+                <div class="partnerships-circle"></div>
+                <h4>Award winning approach</h4>
+              </div>
+              <p>
+                Our unique approach earned us <br />
+                Performance Marketing Agency of the Year 2024.
+              </p>
+              <button>
+                <span class="button-dot"></span>
+                Get in touch
+              </button>
+            </div>
+          </div>
+          <div class="col-12 col-md-12 col-lg-8">
+            <div class="partnership-pictures">
+              <div class="award-pictures">
+                <img class="impact-img" src="imgs/impact.png" alt="" />
+                <img class="uk-img" src="imgs/uk.png" alt="" />
+                <img src="imgs/alf.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- live-chat -->
+    <button class="live-chat-box" id="chatButton">
+      <i class="fa-solid fa-message chat-box-icon"></i>
+    </button>
+
+    <!-- Chat window -->
+    <div class="chat-window" id="chatWindow">
+      <div class="chat-header">
+        <h3>Chat with us</h3>
+        <button class="close-chat" id="closeChat">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="chat-body" id="chatBody">
+        <!-- Dummy text messages -->
+        <div class="message-container support">
+          <div class="message">Hello! How can I help you today?</div>
+          <div class="message-time">10:30 AM</div>
+        </div>
+        <div class="message-container user">
+          <div class="message">
+            I'd like to learn more about your writing services.
+          </div>
+          <div class="message-time">10:32 AM</div>
+        </div>
+      </div>
+      <div class="chat-footer">
+        <input
+          type="text"
+          id="messageInput"
+          placeholder="Type your message here..."
+        />
+        <button id="sendButton">
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </div>
+    </div>
+    <!-- footer -->
+    <div class="footer">
+      <div class="container-fluid">
+        <div class="row footer-main-row">
+          <div class="col-12 col-md-12 col-lg-6">
+            <div class="footer-content">
+              <div class="row footer-row">
+                <div class="col-6 p-0">
+                  <div class="footer-content_content">
+                    <h3>Contact</h3>
+                    <h4>info@bark.london</h4>
+                    <div class="social-links-box">
+                      <div class="social-links-circle">
+                        <i class="fa-brands fa-instagram"></i>
+                      </div>
+                      <div class="social-links-circle">
+                        <i class="fa-brands fa-linkedin"></i>
+                      </div>
+                      <div class="social-links-circle">
+                        <i class="fa-brands fa-tiktok"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 p-0">
+                  <div class="footer-content_content">
+                    <h3 class="sitemap">Sitemap</h3>
+                    <ul class="footer-list">
+                      <li>
+                        <span
+                          ><i class="fa-solid fa-caret-right footer-arrow"></i
+                        ></span>
+                        <a href=""> Services</a>
+                      </li>
+                      <li>
+                        <span
+                          ><i class="fa-solid fa-caret-right footer-arrow"></i
+                        ></span>
+                        <a href="">Work</a>
+                      </li>
+                      <li>
+                        <span
+                          ><i class="fa-solid fa-caret-right footer-arrow"></i
+                        ></span>
+                        <a href=""> Blog</a>
+                      </li>
+                      <li>
+                        <span
+                          ><i class="fa-solid fa-caret-right footer-arrow"></i
+                        ></span>
+                        <a href=""> About</a>
+                      </li>
+                      <li>
+                        <span
+                          ><i class="fa-solid fa-caret-right footer-arrow"></i
+                        ></span>
+                        <a href="">Career</a>
+                      </li>
+                      <li>
+                        <span
+                          ><i
+                            class="fa-solid fa-caret-right footer-arrow"
+                          ></i></span
+                        ><a href="">Contact</a>
+                      </li>
+                      <li>
+                        <span
+                          ><i
+                            class="fa-solid fa-caret-right footer-arrow"
+                          ></i></span
+                        ><a href="">Privacy and Policy</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="footer-logo">
+                  <img src="imgs/white-logo.png" alt="" />
+                  <div class="footer-copyRight-box">
+                    <h5>&copy; 2025 Writ-us</h5>
+                    <button onclick="scrollToTop()">
+                      Back to top
+                      <i class="fa-solid fa-arrow-up up-arrow-footer"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-12 col-lg-6">
+            <div class="footer-form">
+              <h1>Contact Now <span class="footer-green-dot"></span></h1>
+              <p>Want to grow fast? Let’s talk.</p>
+              <div class="footer-inputs">
+                <div class="row">
+                  <div class="col-12 col-md-12 col-lg-6">
+                    <div class="input-group">
+                      <input
+                        required=""
+                        type="text"
+                        name="text"
+                        autocomplete="off"
+                        class="input"
+                      />
+                      <label class="user-label"
+                        >First Name <span class="label-starik">*</span></label
+                      >
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-12 col-lg-6">
+                    <div class="input-group">
+                      <input
+                        required=""
+                        type="text"
+                        name="text"
+                        autocomplete="off"
+                        class="input"
+                      />
+                      <label class="user-label"
+                        >Last Name <span class="label-starik">*</span></label
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12 col-md-12 col-lg-6">
+                    <div class="input-group">
+                      <input
+                        required=""
+                        type="text"
+                        name="text"
+                        autocomplete="off"
+                        class="input"
+                      />
+                      <label class="user-label"
+                        >Company Name <span class="label-starik">*</span></label
+                      >
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-12 col-lg-6">
+                    <div class="input-group">
+                      <input
+                        required=""
+                        type="text"
+                        name="text"
+                        autocomplete="off"
+                        class="input"
+                      />
+                      <label class="user-label"
+                        >Phone <span class="label-starik">*</span></label
+                      >
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="input-group">
+                      <input
+                        required=""
+                        type="text"
+                        name="text"
+                        autocomplete="off"
+                        class="input"
+                      />
+                      <label class="user-label"
+                        >Email<span class="label-starik">*</span></label
+                      >
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="input-group">
+                      <input
+                        required=""
+                        type="text"
+                        name="text"
+                        autocomplete="off"
+                        class="input"
+                      />
+                      <label class="user-label"
+                        >Website<span class="label-starik">*</span></label
+                      >
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="input-group">
+                      <select
+                        required
+                        name="referral"
+                        autocomplete="off"
+                        class="input"
+                      >
+                        <option value="" disabled selected hidden></option>
+                        <option value="social">Social Media</option>
+                        <option value="friend">Friend / Word of Mouth</option>
+                        <option value="google">Google Search</option>
+                        <option value="event">Event / Expo</option>
+                      </select>
+                      <label class="user-label">
+                        Where did you hear about us?
+                        <span class="label-starik">*</span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <div class="input-group text-area">
+                      <input
+                        required=""
+                        type="text"
+                        name="text"
+                        autocomplete="off"
+                        class="input"
+                      />
+                      <label class="user-label"
+                        >Message<span class="label-starik">*</span></label
+                      >
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-12 col-lg-8">
+                    <div class="footer-checkbox-box">
+                      <input type="checkbox" name="" id="" class="check-box" />
+                      <p>
+                        By checking this box, you acknowledge and agree to our
+                        privacy policy.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-12 col-lg-4">
+                    <button class="submit-button">
+                      <span class="button-dot"></span>
+                      Submit
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
